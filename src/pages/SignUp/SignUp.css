@@ -1,0 +1,25 @@
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 20px;
+}
+
+.logo {
+  width: 30px;
+  margin: 0 auto 0 0;
+}
+
+.register-heading {
+  color: var(--helt-blue-main);
+  font-size: var(--fs-one);
+  text-align: center;
+}
+
+.cta {
+  display: flex;
+}
+
+.tac {
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+.network-heading {
+  color: var(--helt-blue-main);
+  font-size: var(--fs-two);
+  margin-bottom: 1rem;
+}
+
+.network {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.network-images {
+  margin: 3rem 0;
+}
+
+@media (max-width: 25rem) {
+  .network {
+    width: 90%;
+    padding: 0 1.5rem;
+  }
+}

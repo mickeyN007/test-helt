@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  width: 98%;
+  margin: 25px auto;
+  border-radius: 50px;
+  padding: 5px 40px;
+}
+
+.nav-logo {
+  width: 50px;
+}
+
+.nav-item .nav-link {
+  font-size: var(--fs-five);
+  color: var(--helt-blue-main);
+  cursor: pointer;
+}
+
+@media (max-width: 50rem) {
+  .nav {
+    width: 94%;
+    padding: 10px 30px;
+  }
+
+  .nav-logo {
+    width: 40px;
+  }
+}

@@ -1,0 +1,48 @@
+.hero-box,
+.feature-box {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-one);
+}
+
+.hero-box {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.feature-box {
+  max-width: 15rem;
+  max-height: 15rem;
+}
+
+.hero-box:nth-child(1) {
+  margin: 5rem 0 0;
+}
+
+.hero-box:nth-child(4) {
+  margin: -2.8rem 0 0;
+}
+
+.feature-box:nth-child(2) {
+  margin: 5rem 0 0;
+}
+
+.feature-box:nth-child(3) {
+  margin: -1.8rem 0 0;
+}
+
+/* Responsiveness */
+@media (max-width: 64rem) {
+  .hero-box:nth-child(1),
+  .hero-box:nth-child(4) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 64rem) and (min-width: 48.0625rem) {
+  .hero-box {
+    margin: 0 1rem;
+  }
+}

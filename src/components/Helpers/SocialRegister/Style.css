@@ -1,0 +1,26 @@
+.social-register {
+  display: grid;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.links {
+  max-width: 320px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 0.4rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.link > img {
+  width: 1.5rem;
+}

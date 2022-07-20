@@ -1,0 +1,8 @@
+a.signup-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--helt-blue-main);
+  color: var(--helt-blue-100);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-one);
+}

@@ -1,0 +1,22 @@
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:valid[focused="true"] {
+  border: 1px solid var(--helt-blue-main);
+}
+
+label {
+  display: block;
+  margin: 0.3rem 0.5rem;
+  font-weight: 800;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--helt-blue-900);
+  padding: 10px;
+  border-radius: 25px;
+  outline: none;
+}

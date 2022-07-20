@@ -1,0 +1,74 @@
+/* Default Feature style */
+/* Feature color & Font style */
+.feature-heading {
+  font-size: var(--fs-two);
+  margin-bottom: 1rem;
+}
+
+span.feature-list {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature-list {
+  font-size: var(--fs-four);
+}
+
+.feature {
+  margin: 2rem 0;
+  margin-left: -4rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+  grid-gap: 10rem;
+  position: relative;
+  padding: 10rem 0 5rem;
+  color: var(--helt-blue-100);
+}
+
+@media (max-width: 50rem) {
+  .feature {
+    grid-gap: 2.5rem;
+  }
+}
+
+.feature::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/bgSvg/feature.svg");
+  z-index: -19;
+}
+
+.feature-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+@media (max-width: 30rem) {
+  .feature {
+    grid-template-columns: 1fr;
+    margin: 0;
+    grid-gap: 0;
+  }
+
+  .features-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .feature::after {
+    left: 0;
+  }
+
+  .feature-images {
+    display: none;
+  }
+}
