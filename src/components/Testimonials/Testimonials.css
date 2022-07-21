@@ -52,3 +52,18 @@ section.testimonial {
     margin-top: 0;
   }
 }
+
+@media (min-width: 90.0625rem) {
+  .quote {
+    line-height: 4rem;
+    font-size: 3rem;
+  }
+  section.testimonial {
+    max-height: 100%;
+    padding: 3rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+}

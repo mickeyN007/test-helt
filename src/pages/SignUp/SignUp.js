@@ -1,3 +1,4 @@
+import React from "react";
 import "./SignUp.css";
 import HeltLogo from "../../assets/images/HeltLogo.png";
 import FormInput from "../../components/Helpers/FormInput/FormInput";
@@ -33,8 +34,28 @@ const inputs = [
 ];
 
 export default function SignUp() {
+  //handle state of form
+  const [registerValue, setRegisterValue] = React.useState({
+    email: "",
+  });
+
+  //handle form change
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setRegisterValue((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value,
+      };
+    });
+  }
   const SignUpInputs = inputs.map((input) => (
-    <FormInput key={input.id} {...input} />
+    <FormInput
+      key={input.id}
+      {...input}
+      value={registerValue[input.name]}
+      handleChange={handleChange}
+    />
   ));
 
   // Handle signup submit

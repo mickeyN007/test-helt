@@ -40,7 +40,11 @@ export default function Faq() {
 
   //iterate questions
   const question = questions.map((question) => (
-    <div key={question.id} className="question">
+    <div
+      key={question.id}
+      className="question"
+      onClick={() => handleShow(question.id)}
+    >
       <div className="inner-question">
         <p className="question-text">{question.faq}</p>
         <p className="plus" onClick={() => handleShow(question.id)}>

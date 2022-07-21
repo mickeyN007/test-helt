@@ -6,3 +6,11 @@ a.signup-link {
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-one);
 }
+
+@media (min-width: 90.0625rem) {
+  a.signup-link {
+    font-size: 3rem;
+    padding: 2rem 5rem;
+    border-radius: 50px;
+  }
+}

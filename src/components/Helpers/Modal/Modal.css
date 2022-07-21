@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(10, 81, 161, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--helt-blue-100);
+  border-radius: var(--border-radius-one);
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 5px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.modal-title {
+  margin: 0;
+  color: var(--helt-blue-main);
+  font-size: var(--fs-two);
+}
+
+.modal-body {
+  border-top: 1px solid var(--helt-blue-main);
+  border-bottom: 1px solid var(--helt-blue-main);
+}

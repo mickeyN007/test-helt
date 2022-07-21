@@ -29,3 +29,17 @@
     width: 40px;
   }
 }
+
+@media (min-width: 90.0625rem) {
+  .nav {
+    padding: 2rem 4rem;
+  }
+
+  .nav-logo {
+    width: 5rem;
+  }
+
+  .nav-item .nav-link {
+    font-size: 3rem;
+  }
+}

@@ -77,3 +77,13 @@
     padding-left: 0;
   }
 }
+
+@media (min-width: 90.0625rem) {
+  .main-heading {
+    font-size: 5rem;
+  }
+
+  .main-paragraph {
+    font-size: 3rem;
+  }
+}

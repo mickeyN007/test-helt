@@ -3,9 +3,8 @@ import "../SignUp/SignUp.css";
 import HeltLogo from "../../assets/images/HeltLogo.png";
 import FormInput from "../../components/Helpers/FormInput/FormInput";
 import Button from "../../components/Helpers/Button/Button";
-import SocialRegister from "../../components/Helpers/SocialRegister/SocialRegister";
 
-//define all Login inputs attributes
+//define all forgot pswd inputs attributes
 const inputs = [
   {
     id: 1,
@@ -15,27 +14,18 @@ const inputs = [
     type: "email",
     required: true,
   },
-  {
-    id: 2,
-    label: "Password",
-    placeholder: "Password",
-    name: "password",
-    type: "password",
-    required: true,
-  },
 ];
 
-export default function Login() {
+export default function ForgotPassword() {
   //handle state of form
-  const [loginValue, setLoginValue] = React.useState({
+  const [resetValue, setResetValue] = React.useState({
     email: "",
-    password: "",
   });
 
   //handle form change
   function handleChange(event) {
     const { name, value } = event.target;
-    setLoginValue((prevValue) => {
+    setResetValue((prevValue) => {
       return {
         ...prevValue,
         [name]: value,
@@ -43,16 +33,16 @@ export default function Login() {
     });
   }
 
-  const LoginInputs = inputs.map((input) => (
+  const ResetInputs = inputs.map((input) => (
     <FormInput
       key={input.id}
       {...input}
-      value={loginValue[input.name]}
+      value={resetValue[input.name]}
       handleChange={handleChange}
     />
   ));
 
-  // Handle Login submit
+  // Handle forgot pswd submit
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -64,21 +54,14 @@ export default function Login() {
             <img src={HeltLogo} alt="" />
           </a>
         </div>
-        <h1 className="register-heading">Login</h1>
+        <h1 className="register-heading">Reset Password</h1>
 
         <form onSubmit={handleSubmit} className="signup-form">
-          {LoginInputs}
+          {ResetInputs}
           <div className="ctas">
-            <Button content="Login" />
-            <a href="/forgetpassword">Forgot Password ?</a>
+            <Button content="Reset Password" />
           </div>
         </form>
-        <div className="signup-link tac">
-          <a href="/signup" className="signup">
-            Don’t have an account ? Sign Up
-          </a>
-        </div>
-        <SocialRegister />
       </div>
     </section>
   );
