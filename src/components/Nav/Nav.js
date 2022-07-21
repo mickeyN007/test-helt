@@ -64,6 +64,7 @@ export default function Nav() {
     />
   ));
 
+  //iterate text area
   const ContactMessage = textArea.map((input) => (
     <TextArea
       key={input.id}
@@ -76,23 +77,47 @@ export default function Nav() {
   //modal show and hide state
   const [show, setShow] = React.useState(false);
 
+  //handle submitted state
+  const [submitted, setSubmitted] = React.useState(false);
+
   function handleShow() {
     setShow((prevShow) => !prevShow);
+    setSubmitted(false);
   }
 
   //handle Contact Modal
   function handleSubmit(event) {
+    setSubmitted(true);
+    setContactValue((prevValue) => {
+      return {
+        ...prevValue,
+        email: "",
+        subject: "",
+        message: "",
+      };
+    });
     event.preventDefault();
   }
 
   return (
     <>
-      <Modal title="Contact Form" onClose={handleShow} show={show}>
-        <form onSubmit={handleSubmit}>
-          {ContacInputs}
-          {ContactMessage}
-          <Button content="submit" />
-        </form>
+      <Modal
+        title={submitted === true ? "Message" : "Contact Form"}
+        onClose={handleShow}
+        show={show}
+      >
+        {submitted === true && (
+          <div className="message">
+            <p>Success</p>
+          </div>
+        )}
+        {submitted === false && (
+          <form onSubmit={handleSubmit}>
+            {ContacInputs}
+            {ContactMessage}
+            <Button content="submit" />
+          </form>
+        )}
       </Modal>
       <nav className="nav">
         <div className="nav-logo">

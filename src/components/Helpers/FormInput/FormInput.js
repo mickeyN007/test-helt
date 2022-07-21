@@ -2,7 +2,8 @@ import React from "react";
 import "./FormInput.css";
 
 export default function FormInput(props) {
-  const { label, placeholder, handleChange, ...inputAttributes } = props;
+  const { label, placeholder, errorMessage, handleChange, ...inputAttributes } =
+    props;
 
   //default state for focused
   const [focused, setFocused] = React.useState(false);
@@ -23,6 +24,7 @@ export default function FormInput(props) {
         onBlur={handleFocus}
         focused={FocusStr}
       />
+      <small className="errMsg">{errorMessage}</small>
     </div>
   );
 }

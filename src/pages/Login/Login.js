@@ -4,6 +4,7 @@ import HeltLogo from "../../assets/images/HeltLogo.png";
 import FormInput from "../../components/Helpers/FormInput/FormInput";
 import Button from "../../components/Helpers/Button/Button";
 import SocialRegister from "../../components/Helpers/SocialRegister/SocialRegister";
+import { useNavigate } from "react-router-dom";
 
 //define all Login inputs attributes
 const inputs = [
@@ -13,6 +14,7 @@ const inputs = [
     placeholder: "Please Enter your Email",
     name: "email",
     type: "email",
+    errorMessage: "it should be a valid email address!",
     required: true,
   },
   {
@@ -26,6 +28,8 @@ const inputs = [
 ];
 
 export default function Login() {
+  //handle redirect
+  const navigate = useNavigate();
   //handle state of form
   const [loginValue, setLoginValue] = React.useState({
     email: "",
@@ -55,6 +59,15 @@ export default function Login() {
   // Handle Login submit
   function handleSubmit(event) {
     event.preventDefault();
+    setLoginValue((prevValue) => {
+      return {
+        ...prevValue,
+        email: "",
+        password: "",
+      };
+    });
+    //redirect to dashboard
+    navigate("/");
   }
   return (
     <section className="form">
